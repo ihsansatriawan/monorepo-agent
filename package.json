@@ -7,17 +7,23 @@
     "dev:api": "pnpm --filter @repo/api dev",
     "dev:platform": "pnpm --filter @repo/platform dev",
     "build": "pnpm -r build",
-    "typecheck": "pnpm -r typecheck",
+    "typecheck": "pnpm -r typecheck && tsc",
     "prepare": "husky",
     "lint": "oxlint --deny-warnings",
     "lint:fix": "oxlint --deny-warnings --fix",
     "format": "oxfmt",
-    "format:check": "oxfmt --check"
+    "format:check": "oxfmt --check",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "catalog:",
     "husky": "^9.1.7",
     "oxfmt": "^0.72.0",
-    "oxlint": "^1.87.0"
+    "oxlint": "^1.87.0",
+    "typescript": "catalog:"
   },
   "packageManager": "pnpm@11.24.0"
 }

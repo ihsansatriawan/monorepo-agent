@@ -114,6 +114,7 @@ Free-form. Lead with the takeaway, then the details.
 | [003](decision/003-file-based-routing-with-tanstack-router.md)  | File-based routing with TanStack Router      | accepted |
 | [004](decision/004-validate-api-input-with-zod.md)              | Validate API input with zod                  | accepted |
 | [005](decision/005-oxc-lint-format-and-pre-commit-checks.md)    | Lint and format with oxc, check every commit | accepted |
+| [006](decision/006-e2e-tests-with-playwright-at-the-root.md)    | E2E tests with Playwright at the root        | accepted |
 
 ### Product
 

@@ -1,0 +1,9 @@
+{
+  // Root-level TypeScript only: e2e tests and the Playwright config.
+  // Each app/package has its own tsconfig.json.
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["e2e", "playwright.config.ts"]
+}
