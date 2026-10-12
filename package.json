@@ -1,0 +1,23 @@
+{
+  "name": "learn-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "dev:api": "pnpm --filter @repo/api dev",
+    "dev:platform": "pnpm --filter @repo/platform dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "prepare": "husky",
+    "lint": "oxlint --deny-warnings",
+    "lint:fix": "oxlint --deny-warnings --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0"
+  },
+  "packageManager": "pnpm@11.24.0"
+}

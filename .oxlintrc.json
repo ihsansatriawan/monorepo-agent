@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "import", "react"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "env": {
+    "builtin": true
+  },
+  "rules": {
+    // Not needed with the automatic JSX runtime (tsconfig "jsx": "react-jsx")
+    "react/react-in-jsx-scope": "off"
+  },
+  "ignorePatterns": ["**/routeTree.gen.ts"],
+  "overrides": [
+    {
+      "files": ["apps/api/**"],
+      "env": { "node": true }
+    },
+    {
+      "files": ["apps/platform/**"],
+      "env": { "browser": true }
+    }
+  ]
+}

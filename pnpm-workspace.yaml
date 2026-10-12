@@ -1,0 +1,13 @@
+packages:
+  - apps/*
+  - packages/*
+
+allowBuilds:
+  esbuild: true
+
+# Shared versions — reference with "catalog:" in any package.json
+catalog:
+  typescript: ^7.0.2
+
+minimumReleaseAgeExclude:
+  - zod@4.6.6
